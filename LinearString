@@ -1,0 +1,23 @@
+class LinearSearch {
+    
+    public static string linearSearchNum(String[] arr, String target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equalsIgnoreCase(target)) { 
+                return i;
+            }
+        }
+        return -1; 
+    }
+
+    public static void main(String[] args) {
+        String[] words = {"HEY", "I AM", "YOU"}; s
+        String word = "Hey";
+        String result = linearSearchNum(words, word); 
+
+        if (result != -1) {
+            System.out.println("Word found at index: " + result);
+        } else {
+            System.out.println("Word not found.");
+        }
+    }
+}
