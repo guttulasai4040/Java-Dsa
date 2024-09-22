@@ -1,0 +1,23 @@
+public class LinearSearchEvenNumbers {
+    public static int linearSearch(int[] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target && array[i] % 2 == 0) {  element is even
+                return i; 
+            }
+        }
+        return -1; 
+    }
+
+    public static void main(String[] args) {
+        int[] data = {2, 4, 6, 8, 10, 7, 3, 9};
+        int target = 6;
+
+        int result = linearSearch(data, target);
+
+        if (result != -1) {
+            System.out.println("Even number " + target + " found at index " + result);
+        } else {
+            System.out.println("Even number " + target + " not found in the array.");
+        }
+    }
+}
