@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class LinearSearchArrayList {
+    public static int linearSearch(ArrayList<Integer> list, int target) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == target) {
+                return i; 
+            }
+        }
+        return -1;
+  }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> data = new ArrayList<>();
+        data.add(12);
+        data.add(34);
+        data.add(45);
+        data.add(9);
+        data.add(8);
+        data.add(23);
+        data.add(19);
+        data.add(56);
+        data.add(31);
+        int target = 23;
+
+        int result = linearSearch(data, target);
+
+        if (result != -1) {
+            System.out.println("Element " + target + " found at index " + result);
+        } else {
+            System.out.println("Element " + target + " not found in the list.");
+        }
+    }
+}
