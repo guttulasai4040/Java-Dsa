@@ -1,0 +1,25 @@
+import java.util.Stack;
+
+public class StackWithPeek {
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+
+        // Push elements onto the stack
+        stack.push(5);
+        stack.push(10);
+        stack.push(15);
+        stack.push(20);
+
+        // Peek at the top element without removing it
+        if (!stack.isEmpty()) {
+            int topElement = stack.peek();
+            System.out.println("Top element of the stack: " + topElement);
+        }
+
+        // Pop elements from the stack
+        while (!stack.isEmpty()) {
+            int poppedElement = stack.pop();
+            System.out.println("Popped: " + poppedElement);
+        }
+    }
+}
