@@ -1,0 +1,61 @@
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class Stack {
+    private Node top;
+
+    public boolean isEmpty() {
+        return top == null;
+    }
+
+    public void push(int value) {
+        Node newNode = new Node(value);
+        newNode.next = top;
+        top = newNode;
+        System.out.println(value + " pushed to the stack.");
+    }
+
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty.");
+            return -1;
+        } else {
+            int value = top.data;
+            top = top.next;
+            System.out.println(value + " popped from the stack.");
+            return value;
+        }
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty.");
+            return -1;
+        } else {
+            return top.data;
+        }
+    }
+}
+
+public class StackExample {
+    public static void main(String[] args) {
+        Stack stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        System.out.println("Top element: " + stack.peek());
+
+        stack.pop();
+        stack.pop();
+
+        System.out.println("Top element after pops: " + stack.peek());
+    }
+}
